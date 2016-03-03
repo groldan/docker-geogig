@@ -1,15 +1,14 @@
 # Once-off tasks to run when setting up the container
 # Tim Sutton, February 21, 2015
+# mods by Luigi Pirelli
 # Install GeoGig
 
-#install geogig
-VERSION=1.0-beta1
+#install geogig web_api branch
 if [ ! -d /geogig ]
-then 
-    wget https://github.com/boundlessgeo/GeoGig/archive/${VERSION}.zip
-    unzip ${VERSION}.zip
-    mv GeoGig-${VERSION} geogig
-    rm ${VERSION}.zip
+then
+	git clone https://github.com/locationtech/geogig.git
+	cd /geogig
+	git checkout web_api
 fi 
 
 cd /geogig/src/parent
