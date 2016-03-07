@@ -6,8 +6,8 @@ host:
 Change the username and email address in the bash command to run the container:
 
 ```bash
-docker pull kartoza/geogig
-sudo docker run -e USER='name' -e EMAIL_ADDRESS='name@gmail.com' --name="geogig" -p 38080:8182  -d  kartoza/geogig
+docker pull boundless/geogig:web_api
+sudo docker run -e USER='name' -e EMAIL_ADDRESS='name@gmail.com' --name="geogig" -p 38080:8182  -d  boundless/geogig:web_api
 ```
 
 
@@ -21,8 +21,9 @@ sudo apt-get install apt-cacher-ng
 Edit ``71-apt-cacher-ng`` to use your host's ip address.
 
 ```bash
-git clone git@github.com:kartoza/docker-geogig.git
+git clone git@github.com:luipir/docker-geogig.git
 cd docker-geogig
+git checkout web_api
 ```
 
 
@@ -40,7 +41,7 @@ maven build grabs a lot of jars.
 After it is installed, to run a container substitute your username and email address on the bash command below:
 
 ```bash
-sudo docker docker run -e USER='name' -e EMAIL_ADDRESS='name@gmail.com' --name="geogig" -p 38080:8182  -d  kartoza/geogig
+sudo docker docker run -e USER='name' -e EMAIL_ADDRESS='name@gmail.com' --name="geogig" -p 38080:8182  -d  boundless/geogig
 ```
 Then from your local machine you should be able to clone the GeoGigRepo
 repository that is created in the docker container:

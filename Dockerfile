@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Admire Nyakudya<admire@kartoza.com>
+MAINTAINER Luigi Pirelli <lpirelli@boundlessgeo.com>
 
 # Use local cached debs from host (saves your bandwidth!)
 # Change ip below to that of your apt-cacher-ng host
