@@ -19,7 +19,7 @@ mkdir -p  /etc/service
 mkdir -p  /etc/service/geogig_serve
 cd /etc/service/geogig_serve
 echo "#!/bin/bash
-exec /geogig/src/cli-app/target/geogig/bin/geogig serve /geogig_repo" > run
+exec /geogig/src/cli-app/target/geogig/bin/geogig serve --repo /geogig_repo" > run
 chmod 0755 run
 
 GEOGIG_PATH=/geogig/src/cli-app/target/geogig/bin
