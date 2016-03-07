@@ -52,3 +52,4 @@ geogig clone http://localhost:38080 gisdata-repo-clone
 
 
 - Tim Sutton, February 2015
+- Luigi Pirelli for Boundless, February 2016
